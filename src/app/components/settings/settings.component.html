@@ -1,0 +1,87 @@
+<div class="wrapper">
+  <section class="category">
+    <h1><mat-icon>settings</mat-icon> Settings</h1>
+    <mat-divider />
+  </section>
+
+  <section class="category">
+    <h2><mat-icon>timer</mat-icon> Clock</h2>
+
+    <div class="setting inline">
+      <mat-form-field class="field">
+        <mat-label>Pomodore</mat-label>
+        <input matInput type="number" [formControl]="pomodoreControl" />
+        <mat-hint>Minutes</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field class="field">
+        <mat-label>Short Break</mat-label>
+        <input matInput type="number" [formControl]="shortBreakControl" />
+        <mat-hint>Minutes</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field class="field">
+        <mat-label>Long Break</mat-label>
+        <input matInput type="number" [formControl]="longBreakControl" />
+        <mat-hint>Minutes</mat-hint>
+      </mat-form-field>
+    </div>
+    <mat-divider />
+  </section>
+
+  <section class="category">
+    <h2><mat-icon>music_note</mat-icon> Sound</h2>
+
+    <div class="setting inline">
+      <mat-slider discrete [displayWith]="formatLabel" class="grow" min="0">
+        <input matSliderThumb [formControl]="volumeControl" />
+      </mat-slider>
+
+      <mat-slide-toggle [formControl]="muteControl" color="primary">
+        Mute
+      </mat-slide-toggle>
+    </div>
+
+    <mat-form-field class="setting">
+      <mat-label>Sound</mat-label>
+      <mat-select [formControl]="soundControl">
+        @for (sound of soundList; track sound.name) {
+          <mat-option [value]="sound.file">{{ sound.name }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="onTestSoundClick()"
+      class="setting"
+    >
+      Test
+    </button>
+    <mat-divider />
+  </section>
+
+  <!-- TODO 
+  section class="category">
+    <h2><mat-icon>tune</mat-icon>Theme</h2>
+    <mat-divider />
+  </section> -->
+
+  <!-- TODO
+  <section class="category">
+    <h2><mat-icon>notifications</mat-icon> Notification</h2>
+    <mat-divider />
+  </section>  -->
+
+  <section class="category">
+    <button
+      mat-raised-button
+      color="warn"
+      (click)="onRestartSettingsClick()"
+      class="setting"
+    >
+      Reset to default settings
+    </button>
+  </section>
+</div>

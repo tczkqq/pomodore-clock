@@ -1,0 +1,5 @@
+export const DEFAULT_SETTING_DEBOUNCE = 500;
+export const DEFAULT_POMODORE_TIME = 25;
+export const DEFAULT_SHORT_BREAK_TIME = 5;
+export const DEFAULT_LONG_BREAK_TIME = 15;
+export const DEFAULT_VOLUME = 30;

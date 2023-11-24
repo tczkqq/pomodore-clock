@@ -1,0 +1,39 @@
+.wrapper  {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+
+    h1 {
+        text-align: center;
+    }
+
+    h2 {
+        gap: 0.4em;
+        display: inline-flex;
+        align-items: center;
+    }
+}
+
+.field {
+    width: 8em
+}
+
+.setting {
+    margin-bottom: 1em;
+
+    &.inline {
+        display: inline-flex;
+        gap: 1em;
+        align-items: center;
+    }
+}
+
+.grow {
+    flex-grow: 1;
+}

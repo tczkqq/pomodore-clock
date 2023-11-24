@@ -1,0 +1,26 @@
+<div class="container">
+  <button
+    mat-raised-button
+    [disabled]="(activeMode$ | async) === 'pomodore'"
+    (click)="setActiveMode('pomodore')"
+    color="primary"
+  >
+    Pomodore
+  </button>
+  <button
+    mat-raised-button
+    [disabled]="(activeMode$ | async) === 'shortBreak'"
+    (click)="setActiveMode('shortBreak')"
+    color="primary"
+  >
+    Short break
+  </button>
+  <button
+    mat-raised-button
+    [disabled]="(activeMode$ | async) === 'longBreak'"
+    (click)="setActiveMode('longBreak')"
+    color="primary"
+  >
+    Long break
+  </button>
+</div>

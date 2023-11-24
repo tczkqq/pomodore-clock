@@ -1,0 +1,33 @@
+<div class="container">
+  <button mat-raised-button color="primary" (click)="onStartPauseClick()">
+    {{ (timerStatus$ | async) ? "Pause" : "Start" }}
+  </button>
+
+  <button
+    mat-mini-fab
+    color="primary"
+    [disabled]="!(timerStatus$ | async)"
+    matTooltip="Finish earlier"
+    (click)="onEarlyFinishClick()"
+  >
+    <mat-icon>last_page</mat-icon>
+  </button>
+
+  <button
+    mat-mini-fab
+    color="primary"
+    matTooltip="Restart timer"
+    (click)="onRestartClick()"
+  >
+    <mat-icon>refresh</mat-icon>
+  </button>
+
+  <button
+    mat-mini-fab
+    color="primary"
+    matTooltip="Open settings"
+    (click)="onSettingsClick()"
+  >
+    <mat-icon>settings</mat-icon>
+  </button>
+</div>
