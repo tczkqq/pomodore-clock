@@ -7,6 +7,7 @@ import { debounceTime, distinctUntilChanged, tap } from 'rxjs';
 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSliderModule } from '@angular/material/slider';
@@ -26,10 +27,11 @@ import { SOUNDS, Sound } from '@constants/sounds';
     ReactiveFormsModule,
     MatSlideToggleModule,
     MatDividerModule,
-    MatInputModule,
+    MatTooltipModule,
     MatSliderModule,
     MatSelectModule,
     MatButtonModule,
+    MatInputModule,
     MatIconModule,
   ],
   templateUrl: './settings.component.html',
@@ -53,6 +55,11 @@ export class SettingsComponent implements AfterViewInit {
 
   muteControl = new FormControl(this.settingService.mute);
 
+  notificationControl = new FormControl({
+    value: this.settingService.notification,
+    disabled: Notification.permission !== 'granted',
+  });
+
   volumeControl = new FormControl(this.settingService.volume);
 
   soundControl = new FormControl(this.settingService.sound);
@@ -61,6 +68,7 @@ export class SettingsComponent implements AfterViewInit {
 
   settingsChanged$ = this.settingService.getSettingsChanges().pipe(
     takeUntilDestroyed(),
+    debounceTime(DEFAULT_SETTING_DEBOUNCE),
     tap(() => {
       this.pomodoreControl.setValue(this.settingService.pomodoreTime);
       this.shortBreakControl.setValue(this.settingService.shortBreakTime);
@@ -119,6 +127,15 @@ export class SettingsComponent implements AfterViewInit {
       )
       .subscribe();
 
+    this.notificationControl.valueChanges
+      .pipe(
+        distinctUntilChanged(),
+        tap((newValue) => {
+          if (newValue !== null) this.settingService.notification = newValue;
+        }),
+      )
+      .subscribe();
+
     this.volumeControl.valueChanges
       .pipe(
         distinctUntilChanged(),
@@ -151,5 +168,11 @@ export class SettingsComponent implements AfterViewInit {
 
   onRestartSettingsClick(): void {
     this.settingService.restartSettingsToDefault();
+  }
+
+  get tooltipLabel(): string {
+    return Notification.permission !== 'granted'
+      ? 'Notification permission is not granted. '
+      : (null as any);
   }
 }

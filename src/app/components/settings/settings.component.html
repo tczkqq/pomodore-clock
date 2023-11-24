@@ -30,6 +30,21 @@
   </section>
 
   <section class="category">
+    <h2><mat-icon>notifications</mat-icon> Notification</h2>
+
+    <div class="setting">
+      <mat-slide-toggle
+        [formControl]="notificationControl"
+        color="primary"
+        [matTooltip]="tooltipLabel"
+      >
+        Notifications
+      </mat-slide-toggle>
+    </div>
+    <mat-divider />
+  </section>
+
+  <section class="category">
     <h2><mat-icon>music_note</mat-icon> Sound</h2>
 
     <div class="setting inline">

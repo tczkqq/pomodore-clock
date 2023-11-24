@@ -68,6 +68,15 @@ export class SettingsService {
     this.settingsChanges.next();
   }
 
+  get notification(): boolean {
+    return localStorage.getItem('notification') === 'true';
+  }
+
+  set notification(value: boolean) {
+    localStorage.setItem('notification', String(value));
+    this.settingsChanges.next();
+  }
+
   get sound(): string {
     return localStorage.getItem('sound') || SOUNDS[0].file;
   }

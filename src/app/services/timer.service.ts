@@ -3,9 +3,11 @@ import { Injectable } from '@angular/core';
 
 import { BehaviorSubject, Observable, delay, tap, timer } from 'rxjs';
 
+import { NotificationService } from './notification.service';
 import { SettingsService } from './settings.service';
-import { Mode } from '@models/misc.model';
 import { SoundService } from './sound.service';
+import { Mode } from '@models/misc.model';
+import { capitalizeFirstLetter } from '@tools/misc';
 
 @Injectable({
   providedIn: 'root',
@@ -23,10 +25,26 @@ export class TimerService {
         if (this.timerRunning.value) this.timer.next(this.timer.value - 1);
       }),
       tap(() => {
-        if (this.timer.value < 1) {
-          this.finishTimer();
-          this.soundService.playSound();
+        if (this.timer.value > 1) return;
+
+        if (this.settingsService.notification) {
+          const actionName = capitalizeFirstLetter(this.activeMode.value);
+
+          const msg =
+            this.activeMode.value === 'pomodore'
+              ? "The work is over. It's time to take a break!"
+              : 'The rest is over. Get back to work!';
+
+          this.notificationService.sendNotification(`${actionName} finished!`, {
+            vibrate: [200, 100, 200],
+            requireInteraction: true,
+            icon: '../../favicon.svg',
+            body: msg,
+          });
         }
+
+        this.soundService.playSound();
+        this.finishTimer();
       }),
     )
     .subscribe();
@@ -44,6 +62,7 @@ export class TimerService {
     .subscribe();
 
   constructor(
+    private notificationService: NotificationService,
     private settingsService: SettingsService,
     private soundService: SoundService,
   ) {}

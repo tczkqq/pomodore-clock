@@ -2,7 +2,7 @@
   <mat-drawer [opened]="showSettings" position="start">
     <app-settings />
   </mat-drawer>
-  <mat-drawer [opened]="!showTasksList" position="end">
+  <mat-drawer [opened]="showTasksList" position="end">
     <app-tasks />
   </mat-drawer>
   <mat-drawer-content class="content">
