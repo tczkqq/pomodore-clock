@@ -1,0 +1,21 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+
+    h1 {
+        text-align: center;
+    }
+
+    h2 {
+        gap: 0.4em;
+        display: inline-flex;
+        align-items: center;
+    }
+}

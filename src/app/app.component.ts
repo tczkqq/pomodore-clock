@@ -7,21 +7,23 @@ import { MatCardModule } from '@angular/material/card';
 
 import { ActionControlsComponent } from '@components/controls/action-controls/action-controls.component';
 import { ModeControlsComponent } from '@components/controls/mode-controls/mode-controls.component';
-import { TimerComponent } from '@components/timer/timer.component';
 import { SettingsComponent } from '@components/settings/settings.component';
+import { TasksComponent } from '@components/tasks/tasks.component';
+import { TimerComponent } from '@components/timer/timer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     CommonModule,
-    TimerComponent,
-    ActionControlsComponent,
-    ModeControlsComponent,
-    SettingsComponent,
     MatDividerModule,
     MatSidenavModule,
     MatCardModule,
+    ActionControlsComponent,
+    ModeControlsComponent,
+    SettingsComponent,
+    TimerComponent,
+    TasksComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -30,4 +32,5 @@ export class AppComponent {
   title = 'pomodore-clock';
 
   showSettings = false;
+  showTasksList = false;
 }

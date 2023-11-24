@@ -19,6 +19,7 @@ import { TimerService } from '@services/timer.service';
 })
 export class ActionControlsComponent {
   @Output() settingsButtonClicked = new EventEmitter<void>();
+  @Output() tasksListButtonClicked = new EventEmitter<void>();
 
   timerStatus$ = this.timer.getTimerStatus().pipe(takeUntilDestroyed());
 
@@ -42,5 +43,9 @@ export class ActionControlsComponent {
 
   onSettingsClick(): void {
     this.settingsButtonClicked.emit();
+  }
+
+  onTasksListClick(): void {
+    this.tasksListButtonClicked.emit();
   }
 }

@@ -1,6 +1,9 @@
-<mat-drawer-container class="fill" opened>
-  <mat-drawer mode="side" [opened]="showSettings">
+<mat-drawer-container class="fill" [hasBackdrop]="false">
+  <mat-drawer [opened]="showSettings" position="start">
     <app-settings />
+  </mat-drawer>
+  <mat-drawer [opened]="!showTasksList" position="end">
+    <app-tasks />
   </mat-drawer>
   <mat-drawer-content class="content">
     <main class="card">
@@ -8,6 +11,7 @@
       <app-timer />
       <app-action-controls
         (settingsButtonClicked)="showSettings = !showSettings"
+        (tasksListButtonClicked)="showTasksList = !showTasksList"
       />
     </main>
   </mat-drawer-content>

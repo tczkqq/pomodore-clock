@@ -1,0 +1,47 @@
+<div class="wrapper">
+  <section class="category">
+    <h1><mat-icon>task_alt</mat-icon> Tasks</h1>
+    <mat-divider />
+    <mat-selection-list
+      [(ngModel)]="tasksSelected"
+      (selectionChange)="saveTasksToStorage()"
+    >
+      @for (task of tasks; track task.id) {
+        <mat-list-option [value]="task" [selected]="task.completed">
+          {{ task.name }}
+        </mat-list-option>
+      }
+    </mat-selection-list>
+    <mat-divider />
+  </section>
+
+  <section class="category">
+    <mat-form-field class="field">
+      <mat-label>Enter new task</mat-label>
+      <input matInput type="text" [formControl]="newTaskControl" />
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="primary"
+      class="setting"
+      (click)="onNewTaskClick()"
+      [disabled]="newTaskControl.invalid"
+    >
+      Add new task
+    </button>
+  </section>
+
+  @if (tasks.length > 0) {
+    <section class="category">
+      <button
+        mat-raised-button
+        color="warn"
+        class="setting"
+        [disabled]="tasksSelected.length < 1"
+        (click)="deleteSelectedTasks()"
+      >
+        Delete completed tasks
+      </button>
+    </section>
+  }
+</div>
