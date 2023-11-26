@@ -38,7 +38,7 @@ export class TimerService {
           this.notificationService.sendNotification(`${actionName} finished!`, {
             vibrate: [200, 100, 200],
             requireInteraction: true,
-            icon: '../../favicon.svg',
+            icon: '../../favicon.ico',
             body: msg,
           });
         }
