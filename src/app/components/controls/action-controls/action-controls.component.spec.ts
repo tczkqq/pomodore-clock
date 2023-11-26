@@ -19,4 +19,28 @@ describe('ActionControlsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should open tasks list', () => {
+    const spy = spyOn(component.tasksListButtonClicked, 'emit');
+    component.onTasksListClick();
+    expect(spy).toHaveBeenCalled();
+  });
+
+  it('should open tasks list', () => {
+    const spy = spyOn(component.settingsButtonClicked, 'emit');
+    component.onSettingsClick();
+    expect(spy).toHaveBeenCalled();
+  });
+
+  it('should restart timer', () => {
+    const spy = spyOn(component['timer'], 'restartTimer');
+    component.onRestartClick();
+    expect(spy).toHaveBeenCalled();
+  });
+
+  it('should finish timer', () => {
+    const spy = spyOn(component['timer'], 'finishTimer');
+    component.onEarlyFinishClick();
+    expect(spy).toHaveBeenCalled();
+  });
 });
