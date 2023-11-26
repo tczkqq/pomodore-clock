@@ -1,0 +1,99 @@
+{
+  "configVersion": 1,
+  "timestamp": 1701033100726,
+  "index": "C:/Program Files/Git/pomodore-clock/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "C:/Program Files/Git/pomodore-clock/favicon.ico",
+        "C:/Program Files/Git/pomodore-clock/index.html",
+        "C:/Program Files/Git/pomodore-clock/main-QUBOFJ4J.js",
+        "C:/Program Files/Git/pomodore-clock/manifest.webmanifest",
+        "C:/Program Files/Git/pomodore-clock/polyfills-LZBJRJJE.js",
+        "C:/Program Files/Git/pomodore-clock/styles-F2QTUVKY.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "C:/Program Files/Git/pomodore-clock/assets/constants/settings.ts",
+        "C:/Program Files/Git/pomodore-clock/assets/constants/sounds.ts",
+        "C:/Program Files/Git/pomodore-clock/assets/icons/icon-128x128.png",
+        "C:/Program Files/Git/pomodore-clock/assets/icons/icon-144x144.png",
+        "C:/Program Files/Git/pomodore-clock/assets/icons/icon-152x152.png",
+        "C:/Program Files/Git/pomodore-clock/assets/icons/icon-192x192.png",
+        "C:/Program Files/Git/pomodore-clock/assets/icons/icon-384x384.png",
+        "C:/Program Files/Git/pomodore-clock/assets/icons/icon-512x512.png",
+        "C:/Program Files/Git/pomodore-clock/assets/icons/icon-72x72.png",
+        "C:/Program Files/Git/pomodore-clock/assets/icons/icon-96x96.png",
+        "C:/Program Files/Git/pomodore-clock/assets/images/screenshot.png",
+        "C:/Program Files/Git/pomodore-clock/assets/sounds/announce-tones.wav",
+        "C:/Program Files/Git/pomodore-clock/assets/sounds/arabian-mystery.wav",
+        "C:/Program Files/Git/pomodore-clock/assets/sounds/bell.wav",
+        "C:/Program Files/Git/pomodore-clock/assets/sounds/happy-bells.wav",
+        "C:/Program Files/Git/pomodore-clock/assets/sounds/positive.wav",
+        "C:/Program Files/Git/pomodore-clock/assets/sounds/reveal.wav",
+        "C:/Program Files/Git/pomodore-clock/assets/sounds/reward.wav"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "C:/Program Files/Git/pomodore-clock/assets/constants/settings.ts": "f79d566a2cfe28e9d17fff538a2ada189746a9ff",
+    "C:/Program Files/Git/pomodore-clock/assets/constants/sounds.ts": "b77bddce5226402af483449380ca1a8cecff5a20",
+    "C:/Program Files/Git/pomodore-clock/assets/icons/icon-128x128.png": "846b8c8eb10d2579c5e9a5b75f63a6165e552d48",
+    "C:/Program Files/Git/pomodore-clock/assets/icons/icon-144x144.png": "a73c5d5cab1c93b1c751d924f5155b6bc3cd9fcc",
+    "C:/Program Files/Git/pomodore-clock/assets/icons/icon-152x152.png": "6c95fcb59b7b4d0ed4fc95439b7248f786d80f94",
+    "C:/Program Files/Git/pomodore-clock/assets/icons/icon-192x192.png": "82539a6f1ea8c9a1c1c03d5eada811ecfa07eecd",
+    "C:/Program Files/Git/pomodore-clock/assets/icons/icon-384x384.png": "cebc05929f6d554a865ee93d441f3c0352e0f9fc",
+    "C:/Program Files/Git/pomodore-clock/assets/icons/icon-512x512.png": "6a953c606bc828ad50fc3e40522caf43be0fcd7c",
+    "C:/Program Files/Git/pomodore-clock/assets/icons/icon-72x72.png": "4f705a8068510b10ecd7b96826715b82bddb7375",
+    "C:/Program Files/Git/pomodore-clock/assets/icons/icon-96x96.png": "5b4c8b351b7d90c89c70dbc050009b5268a22703",
+    "C:/Program Files/Git/pomodore-clock/assets/images/screenshot.png": "2005421d845c9bf232fd6b126be45bb60f857828",
+    "C:/Program Files/Git/pomodore-clock/assets/sounds/announce-tones.wav": "f00634048675b62dffd85df50d45c79251d47237",
+    "C:/Program Files/Git/pomodore-clock/assets/sounds/arabian-mystery.wav": "7f0081251d3bc44c727157adc32e9046de4fd2c0",
+    "C:/Program Files/Git/pomodore-clock/assets/sounds/bell.wav": "a7b329efe50d04bc5bf2aa7532df5eba9c5f3a37",
+    "C:/Program Files/Git/pomodore-clock/assets/sounds/happy-bells.wav": "cbd0cac3ea0feef397dc587bec293d78a9268998",
+    "C:/Program Files/Git/pomodore-clock/assets/sounds/positive.wav": "c51061c845381030493def911586a5c587b7dca5",
+    "C:/Program Files/Git/pomodore-clock/assets/sounds/reveal.wav": "af20160171b000226630e314241bfb8cfabc4c18",
+    "C:/Program Files/Git/pomodore-clock/assets/sounds/reward.wav": "3fa5de69f312d25398225d6fa37af14da1446fb7",
+    "C:/Program Files/Git/pomodore-clock/favicon.ico": "29125c5806657a34d50904af0d57c309b1a7ca85",
+    "C:/Program Files/Git/pomodore-clock/index.html": "565318e9c7c0e0ec18057361a9a2fe8105bb68eb",
+    "C:/Program Files/Git/pomodore-clock/main-QUBOFJ4J.js": "eb99a75930b42fae66b037e5be83b7c1849a107f",
+    "C:/Program Files/Git/pomodore-clock/manifest.webmanifest": "4a3a148ddeef6b05692d9f2a8d87e1b6ad65eb29",
+    "C:/Program Files/Git/pomodore-clock/polyfills-LZBJRJJE.js": "fda1c82c5c620f1fa442f687b3df45a037f6fcc9",
+    "C:/Program Files/Git/pomodore-clock/styles-F2QTUVKY.css": "3c04f3be5f1bd9cbc16224998139d7064d957b18"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

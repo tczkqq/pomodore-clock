@@ -12,13 +12,15 @@ Simple & Minimalisitc pomodoro clock application written using Angular 17 & Angu
 
 ## Roadmap
 
-- [x] ~~Notifications API~~
 - [ ] Theme customization
-- [x] ~~To do list~~
-- [ ] Responsive
-- [x] ~~PWA app~~
 - [ ] Tests
+- [ ] History
 - [ ] Github actions
+- [x] ~~Notifications API~~
+- [x] ~~To do list~~
+- [x] ~~Responsive~~
+- [x] ~~PWA app~~
+- [x] ~~Github pages~~
 
 ## Development server
 
