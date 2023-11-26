@@ -13,6 +13,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 
 import { ITask } from '@models/task.model';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-tasks',
@@ -25,6 +26,7 @@ import { ITask } from '@models/task.model';
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatTooltipModule,
   ],
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.scss',

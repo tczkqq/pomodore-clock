@@ -7,7 +7,11 @@
       (selectionChange)="saveTasksToStorage()"
     >
       @for (task of tasks; track task.id) {
-        <mat-list-option [value]="task" [selected]="task.completed">
+        <mat-list-option
+          [value]="task"
+          [selected]="task.completed"
+          [matTooltip]="task.name"
+        >
           {{ task.name }}
         </mat-list-option>
       }

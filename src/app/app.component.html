@@ -1,8 +1,8 @@
 <mat-drawer-container class="fill" [hasBackdrop]="true">
-  <mat-drawer [opened]="showSettings" position="start">
+  <mat-drawer [opened]="showSettings" position="start" class="side-menu">
     <app-settings />
   </mat-drawer>
-  <mat-drawer [opened]="showTasksList" position="end">
+  <mat-drawer [opened]="showTasksList" position="end" class="side-menu">
     <app-tasks />
   </mat-drawer>
   <mat-drawer-content class="content">
