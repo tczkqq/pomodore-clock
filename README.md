@@ -4,13 +4,19 @@ Simple & Minimalisitc pomodoro clock application written using Angular 17 & Angu
 
 ![screenshot](src/assets/images/screenshot.png)
 
+## Features
+
+- Customization
+- To Do List
+- Progressive web app
+
 ## Roadmap
 
 - [x] ~~Notifications API~~
 - [ ] Theme customization
 - [x] ~~To do list~~
 - [ ] Responsive
-- [ ] PWA app
+- [x] ~~PWA app~~
 - [ ] Tests
 - [ ] Github actions
 
