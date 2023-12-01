@@ -5,6 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class NotificationService {
   requestPermission(): void {
+    if ('Notification' in window) {
+      Notification.requestPermission();
+    }
     Notification.requestPermission();
   }
 
@@ -13,8 +16,12 @@ export class NotificationService {
   }
 
   sendNotification(title: string, options?: NotificationOptions): void {
-    if (this.getPermission() === 'granted') {
-      new Notification(title, options);
-    }
+    Notification.requestPermission(function (result) {
+      if (result === 'granted') {
+        navigator.serviceWorker.ready.then(function (registration) {
+          registration.showNotification(title, options);
+        });
+      }
+    });
   }
 }
