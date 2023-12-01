@@ -12,10 +12,7 @@ Simple & Minimalisitc pomodoro clock application written using Angular 17 & Angu
 
 ## Roadmap
 
-- [ ] Theme customization
 - [ ] Tests
-- [ ] History
-- [ ] Github actions
 - [x] ~~Notifications API~~
 - [x] ~~To do list~~
 - [x] ~~Responsive~~
@@ -33,7 +30,3 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
